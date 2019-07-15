@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { TestContext } from './context'
+import { TestContext } from '../../../context'
 
 function Example() {
   // 声明一个新的叫做 “count” 的 state 变量

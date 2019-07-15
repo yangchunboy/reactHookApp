@@ -1,17 +1,12 @@
 import React from 'react';
 import './App.css';
-import Count from './Count'
-import { TestContext } from './context'
+import Home from './pages/home/index'
 
 function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
-      <TestContext.Provider value="我是testContext">
-        <Count />
-      </TestContext.Provider>
+      <Home />
     </div>
   );
 }
