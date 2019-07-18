@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -7,15 +7,19 @@ import store from './store/store'
 
 import './index.less';
 
-import Home from './pages/home/index'
-import ShopCar from './pages/shopCar/index'
+import Loading from './components/Loading'
+
+const  Home = lazy(() => import('./pages/home/index'))
+const  ShopCar = lazy(() => import('./pages/shopCar/index'))
 
 const AppRouter = () => {
   return (
     <Provider store={ store }>
       <Router>
-        <Route path="/" exact component={Home} />
-        <Route path="/shopCar" component={ShopCar}  />
+        <Suspense fallback={ <Loading /> }>
+          <Route path="/" exact component={Home} />
+          <Route path="/shopCar" component={ShopCar}  />
+        </Suspense>
       </Router>
     </Provider>
   )
