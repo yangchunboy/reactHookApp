@@ -1,22 +1,27 @@
 ### Hooks
 由react hooks + react router + redux + react-redux编写
 
-#使用方法
+# 使用方法
 ```javascript
   npm install // 或者yarn install
   npm run dev // 本地开发
   npm run build // 打包
 
 ```
-#支持的功能
+
+# 目录结构
+
+
+
+# 支持的功能
 1. 使用create-react-app脚手架
 2. 在此基础上增加了less的支持和autoprefixer
 
-#待实现的功能
+# 待实现的功能
 1. code splitting
 
 
-#参考文档
+# 参考文档
 - [react hooks文档](https://zh-hans.reactjs.org/docs/hooks-intro.html)
 - [redux官网](https://redux.js.org/introduction/getting-started)
 - [react-redux的hooks的api文档](https://react-redux.js.org/api/hooks)
